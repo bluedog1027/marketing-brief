@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "marketing-brief-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/marketingBrief/MarketingBriefWebPart.js",
+          "manifest": "./src/webparts/marketingBrief/MarketingBriefWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "MarketingBriefWebPartStrings": "lib/webparts/marketingBrief/loc/{locale}.js"
+  }
+}

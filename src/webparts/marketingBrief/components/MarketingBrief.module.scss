@@ -1,0 +1,162 @@
+@import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
+
+.marketingBrief {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navPanel {
+  width: 240px;
+  min-width: 240px;
+  background: #ffffff;
+  border-right: 1px solid #e0e0e0;
+  padding: 20px 0;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
+}
+
+.navHeader {
+  padding: 0 20px 20px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #2cafe2;
+  border-bottom: 1px solid #e8e8e8;
+  margin-bottom: 10px;
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  transition: background 0.15s;
+
+  &:hover {
+    background: #f0f8ff;
+    color: #2cafe2;
+  }
+
+  &.active {
+    background: #e6f4fd;
+    color: #2cafe2;
+    font-weight: 600;
+    border-left: 3px solid #2cafe2;
+  }
+}
+
+.mainContent {
+  flex: 1;
+  padding: 24px 32px;
+  overflow-x: auto;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 24px;
+  margin-bottom: 20px;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 24px;
+}
+
+.formFieldFull {
+  grid-column: 1 / -1;
+}
+
+.statusBadge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.statusNotStarted {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.statusInProgress {
+  background: #cce5ff;
+  color: #004085;
+}
+
+.statusComplete {
+  background: #d4edda;
+  color: #155724;
+}
+
+.setupContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  text-align: center;
+  gap: 16px;
+}
+
+.tableContainer {
+  overflow-x: auto;
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th {
+      text-align: left;
+      padding: 10px 12px;
+      background: #f8f9fa;
+      border-bottom: 2px solid #dee2e6;
+      font-weight: 600;
+      font-size: 13px;
+      color: #555;
+    }
+
+    td {
+      padding: 10px 12px;
+      border-bottom: 1px solid #eee;
+      font-size: 14px;
+    }
+
+    tr:hover td {
+      background: #f8fbfe;
+    }
+  }
+}
+
+.titleLink {
+  color: #2cafe2;
+  text-decoration: none;
+  font-weight: 500;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.buttonRow {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.commentsSection {
+  margin-top: 24px;
+}
