@@ -170,14 +170,12 @@ export const FormPage: React.FC<IFormPageProps> = ({ sp, context }) => {
           </div>
           <div>
             <Label required>Season</Label>
-            <Dropdown
-              value={season}
-              selectedOptions={[season]}
-              onOptionSelect={(_, d) => setSeason(d.optionValue || "Summer")}
-              style={{ width: "100%" }}
-            >
-              {SEASONS.map((s) => <Option key={s} value={s}>{s}</Option>)}
-            </Dropdown>
+            {React.createElement(Dropdown, {
+              value: season,
+              selectedOptions: [season],
+              onOptionSelect: (_: any, d: any) => setSeason(d.optionValue || "Summer"),
+              style: { width: "100%" },
+            }, ...SEASONS.map((s) => React.createElement(Option, { key: s, value: s }, s)))}
           </div>
           <div>
             <Label required>Year</Label>
@@ -189,14 +187,12 @@ export const FormPage: React.FC<IFormPageProps> = ({ sp, context }) => {
           </div>
           <div>
             <Label required>Priority</Label>
-            <Dropdown
-              value={priority}
-              selectedOptions={[priority]}
-              onOptionSelect={(_, d) => setPriority(d.optionValue || "Medium")}
-              style={{ width: "100%" }}
-            >
-              {PRIORITIES.map((p) => <Option key={p} value={p}>{p}</Option>)}
-            </Dropdown>
+            {React.createElement(Dropdown, {
+              value: priority,
+              selectedOptions: [priority],
+              onOptionSelect: (_: any, d: any) => setPriority(d.optionValue || "Medium"),
+              style: { width: "100%" },
+            }, ...PRIORITIES.map((p) => React.createElement(Option, { key: p, value: p }, p)))}
           </div>
           <div>
             <Label required>Due Date</Label>
@@ -245,14 +241,12 @@ export const FormPage: React.FC<IFormPageProps> = ({ sp, context }) => {
 
           <div>
             <Label>Status</Label>
-            <Dropdown
-              value={status}
-              selectedOptions={[status]}
-              onOptionSelect={(_, d) => setStatus(d.optionValue || "Not Started")}
-              style={{ width: "100%" }}
-            >
-              {STATUSES.map((s) => <Option key={s} value={s}>{s}</Option>)}
-            </Dropdown>
+            {React.createElement(Dropdown, {
+              value: status,
+              selectedOptions: [status],
+              onOptionSelect: (_: any, d: any) => setStatus(d.optionValue || "Not Started"),
+              style: { width: "100%" },
+            }, ...STATUSES.map((s) => React.createElement(Option, { key: s, value: s }, s)))}
           </div>
 
           <div className={styles.formFieldFull}>
